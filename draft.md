@@ -1,5 +1,3 @@
-# Outline
-
 ## Statement of Need
 Colleges apply multiple programming languages in the courses (include introductory courses) [reference1](https://dl.acm.org/doi/pdf/10.1145/3626252.3630761)
 

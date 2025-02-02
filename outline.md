@@ -1,4 +1,6 @@
-# Summary
+# Outline
+
+## Summary
 1. What the tool is
 2. What is its features
 3. Quick walk-through of its architecture
