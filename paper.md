@@ -1,13 +1,13 @@
 ---
-title: 'Gala: A Python package for galactic dynamics'
+title: 'Using Treesitter-Based Techniques to Automatically Detect Code Smells in Programming Projects'
 tags:
-  - Python
-  - astronomy
-  - dynamics
-  - galactic dynamics
-  - milky way
+  - code quality
+  - code smell
+  - python
+  - java
+  - javascript
 authors:
-  - name: Adrian M. Price-Whelan
+  - name: Yanqiao Chen
     orcid: 0000-0003-0872-7098
     affiliation: "1, 2" # (Multiple affiliations must be quoted)
   - name: Author Without ORCID
@@ -17,7 +17,7 @@ affiliations:
    index: 1
  - name: Institution 2
    index: 2
-date: 13 August 2017
+date: 16 February 2025
 bibliography: paper.bib
 
 # Optional fields if submitting to a AAS journal too, see this blog post:
@@ -28,46 +28,18 @@ aas-journal: Astrophysical Journal <- The name of the AAS journal.
 
 # Summary
 
-The forces on stars, galaxies, and dark matter under external gravitational
-fields lead to the dynamical evolution of structures in the universe. The orbits
-of these bodies are therefore key to understanding the formation, history, and
-future state of galaxies. The field of "galactic dynamics," which aims to model
-the gravitating components of galaxies to study their structure and evolution,
-is now well-established, commonly taught, and frequently used in astronomy.
-Aside from toy problems and demonstrations, the majority of problems require
-efficient numerical tools, many of which require the same base code (e.g., for
-performing numerical orbit integration).
+TreeNose is a language-independent static analysis tool for detecting code smells, a series of code-design-related concerns that may decrease readability and maintainability of software projects. Meanwhile, one of the characteristics of modern Computer Science education is the learning of different programming languages in multiple or even single courses. TreeNose helps instructors to design code smells detectors in different programming languages under the same rules used to track code smells from assignments, therefore avoiding the nuance of configuring multiple language-specific detectors. TreeNose features the implementation of Treesitter, a general parser generator, which provides users a easy and universal configuration experience in different programming languages for instructors and an universal detection experience for student. By default, TreeNose supports 5 common code smells: Long Method, Long Class, Long Parameter List, Complex Conditional, Long Message Chain and 3 programming languages: Java, JavaScript and Python.
 
-``Gala`` is an Astropy-affiliated Python package for galactic dynamics. Python
-enables wrapping low-level languages (e.g., C) for speed without losing
-flexibility or ease-of-use in the user-interface. The API for ``Gala`` was
-designed to provide a class-based and user-friendly interface to fast (C or
-Cython-optimized) implementations of common operations such as gravitational
-potential and force evaluation, orbit integration, dynamical transformations,
-and chaos indicators for nonlinear dynamics. ``Gala`` also relies heavily on and
-interfaces well with the implementations of physical units and astronomical
-coordinate systems in the ``Astropy`` package [@astropy] (``astropy.units`` and
-``astropy.coordinates``).
+# Statement of Need
 
-``Gala`` was designed to be used by both astronomical researchers and by
-students in courses on gravitational dynamics or astronomy. It has already been
-used in a number of scientific publications [@Pearson:2017] and has also been
-used in graduate courses on Galactic dynamics to, e.g., provide interactive
-visualizations of textbook material [@Binney:2008]. The combination of speed,
-design, and support for Astropy functionality in ``Gala`` will enable exciting
-scientific explorations of forthcoming data releases from the *Gaia* mission
-[@gaia] by students and experts alike.
+Code smells are a series of code-design-related concerns
+that may decrease readability and maintainability of software projects, ultimately limiting opportunities for future maintenance. One of the characteristics of many modern software projects is their use of multiple programming languages. The
+combination of programming languages allows developers to
+mix and match the functionalities and libraries that are best
+supported by a specific programming language. While developers noticed the harm of code smells in projects and built a series of code smell detectors, most of code smell detectors are language-specific. Therefore, developers usually apply a combination of code smell detectors for the multi-language projects, thereby introducing the burdensome
+need to consistently configure multiple smell detection tools. This nuance also affects instructors in the modern Computer Science courses. Research shows instructors over the world apply different programming languages or combination of them in the introductory cs courses. Industry-prevalent Programming languages like Python and Java are widely used in Computer Science courses. At the same time, researchers prove that, by applying static analysis tools like Pylint, instructors can effectively track students’ understanding in coding best practices in an introductory cs course of 200 students
 
-# Mathematics
-
-Single dollars ($) are required for inline mathematics e.g. $f(x) = e^{\pi/x}$
-
-Double dollars make self-standing equations:
-
-$$\Theta(x) = \left\{\begin{array}{l}
-0\textrm{ if } x < 0\cr
-1\textrm{ else}
-\end{array}\right.$$
+Since the debut of LLM, surveys show Generative Artificial Intelligence (GenAI), like Codex and Copilot, are widely used by students when working with code. However, those GenAIs have the tendency to contain code smell problems because of inherent code smells from their source database. Therefore, TreeNose can also help students to identify those code smells in the AI generated code that they may apply but fail to evaluate.
 
 
 # Citations
