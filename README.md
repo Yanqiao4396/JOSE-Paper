@@ -11,7 +11,7 @@ Please run the following docker command to compile markdown into PDF locally.
 
 ```
 docker run --rm \
-    --volume $PWD/paper: \
+    --volume $PWD/paper \
     --user $(id -u):$(id -g) \
     --env JOURNAL=joss \
     openjournals/inara
