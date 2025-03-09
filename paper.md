@@ -37,7 +37,7 @@ To overcome this challenge, TreeNose helps instructors to design code smells det
 in different programming languages under consistent detection rules. Such a multi-language code smell detector
 can help to track code smells residing in assignment projects of students, avoiding the nuance of 
 configuring multiple language-specific detectors. TreeNose features the implementation 
-of Treesitter, a general parser generator, which provides users a easy and 
+of TreeSitter [@treeSitter], a general parser generator, which provides users a easy and 
 universal configuration experience in different programming languages. 
 By default, TreeNose supports 5 of the most common code [@developersCare] smells:
 Long Method, Long Class, Long Parameter List, Complex Conditional, Long Message Chain 
@@ -77,8 +77,16 @@ Since the debut of LLM, surveys show Generative Artificial Intelligence (GenAI),
 are widely used and accepted by students when working with code [@robotInEducation]. However, those GenAIs have the tendency to contain code smell problems because of inherent code smells from their source database[@codeSmellInGenAI]. Therefore, TreeNose can also help students to identify those code smells in the AI generated code that they may apply but fail to evaluate first.
 
 # Applications of TreeNose
+<!-- TODO: Application of TreeNose in Menagerie, an open source scored assignment dataset [@messer_brown_kölling_shi_2024] -->
 
-TODO: Application of TreeNose in Menagerie, an open source scored assignment dataset [@messer_brown_kölling_shi_2024]
+TreeNose is CLI-based and can be easily deployed locally. To detect code smells,  users are required to install NPM only and run the commands with information like: 1. Locations of input files 2. Languages of the code 3. Locations of output reports. TreeNose applies JSON files to configure the detections like detection thresholds. If users want to add new programming languages in the detection, they need to map the language-specific TreeSitter clauses into the generalized TreeNose clauses based on the Tree-sitter bindings [@treeSitter]
+<!-- 
+How to use TreeNose
+
+1. deploy locally
+2. Configuration: map language-specific TreeSitter syntaxes to TreeNose syntaxes
+3. Input: Threshold set up -> CLI interface
+4. Output: csv file + CLI output -->
 
 # Citations
 
